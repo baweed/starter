@@ -2,6 +2,7 @@
 /* eslint-disable no-console*/
 import express from 'express';
 import * as tourController from '../controllers/tourController.js';
+import * as authController from '../controllers/authController.js';
 
 const router = express.Router();
 
@@ -14,7 +15,7 @@ router.route('/monthly-plan/:year').get(tourController.getTourMothlyPlan); // Fi
 
 router
   .route('/')
-  .get(tourController.getAllTours)
+  .get(authController.protect, tourController.getAllTours)
   .post(tourController.createTour);
 
 router

@@ -2,7 +2,7 @@
 import { Router } from 'express';
 import tourRouter from './tourRoutes.js';
 import userRouter from './userRoutes.js';
-import AppError from '../utils/appError.js';
+// import AppError from '../utils/appError.js';
 
 const router = Router();
 
