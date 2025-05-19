@@ -6,7 +6,7 @@ import appRouter from './routes/appRoutes.js';
 
 import errorController from './controllers/errorController.js';
 
-dotenv.config();
+dotenv.config({ path: '.env' });
 
 const app = express();
 if (process.env.NODE_ENV === 'development') app.use(morgan('dev'));
